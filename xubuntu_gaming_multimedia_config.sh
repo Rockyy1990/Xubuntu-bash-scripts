@@ -20,7 +20,7 @@ clear
 sudo add-apt-repository -y ppa:kisak/kisak-mesa
 sudo add-apt-repository -y ppa:savoury1/pipewire
 sudo add-apt-repository -y ppa:xtradeb/apps
-sudo add-apt-repository -y ppa:ubuntuhandbook1/handbrake
+#sudo add-apt-repository -y ppa:ubuntuhandbook1/handbrake
 sudo add-apt-repository -y ppa:mozillateam/ppa
 sudo apt update 
 clear
@@ -58,7 +58,7 @@ sudo apt install -y ffmpeg libavdevice60 libavcodec-extra aac-enc lame libmad0 f
 sudo apt install -y celluloid handbrake soundconverter yt-dlp
 
 # Gaming
-sudo apt install --install-recommends -y steam gamemode libgdiplus libfaudio0 libopenal1 libvkd3d1 protontricks
+sudo apt install --install-recommends -y steam gamemode libgdiplus libfaudio0 libopenal1 libvkd3d1 libvkd3d-headers protontricks
 
 flatpak install -y flathub com.github.tchx84.Flatseal
 flatpak install -y flathub net.davidotek.pupgui2

@@ -21,7 +21,6 @@ clear
 sudo add-apt-repository -y ppa:graphics-drivers/ppa
 sudo add-apt-repository -y ppa:savoury1/pipewire
 sudo add-apt-repository -y ppa:xtradeb/apps
-sudo add-apt-repository -y ppa:ubuntuhandbook1/handbrake
 sudo add-apt-repository -y ppa:heyarje/makemkv-beta
 sudo apt update 
 clear
@@ -36,13 +35,17 @@ sudo apt-mark hold snapd
 
 # Install flatpak 
 sudo apt install -y flatpak 
-flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo 
+flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+flatpak update 
+clear
 
-
+echo "Install needed packages.."
+sleep 2
 sudo apt install -y synaptic mousepad gsmartcontrol build-essential fakeroot dkms ufw samba libnss-winbind winbind linux-headers-$(uname -r) openssh-server
 sudo apt install -y wget curl apt-transport-https software-properties-common perl gnome-disk-utility gnome-firmware gnome-system-monitor pavucontrol
 sudo apt install -y mtools f2fs-tools xfsdump gvfs-backends thunarx-python
 #sudo apt install -y xorgxrdp xrdp
+clear
 
 
 wget -qO - https://dl.xanmod.org/archive.key | sudo gpg --dearmor -vo /etc/apt/keyrings/xanmod-archive-keyring.gpg
