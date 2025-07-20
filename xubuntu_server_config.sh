@@ -45,7 +45,6 @@ sleep 2
 sudo apt install -y synaptic mousepad gsmartcontrol build-essential fakeroot dkms ufw samba libnss-winbind winbind linux-headers-$(uname -r) openssh-server
 sudo apt install -y wget curl apt-transport-https software-properties-common perl gnome-disk-utility gnome-firmware gnome-system-monitor pavucontrol
 sudo apt install -y mtools f2fs-tools xfsdump gvfs-backends thunarx-python
-#sudo apt install -y xorgxrdp xrdp
 clear
 
 
@@ -64,13 +63,8 @@ curl -s 'https://liquorix.net/install-liquorix.sh' | sudo bash
 sudo apt install -y gstreamer1.0-fdkaac gstreamer1.0-plugins-bad gstreamer1.0-plugins-rtp gir1.2-gst-plugins-bad-1.0 gstreamer1.0-espeak 
 sudo apt install -y gstreamer1.0-vaapi gstreamer1.0-pipewire gstreamer1.0-gtk3 rtkit
 sudo apt install -y ffmpeg libavdevice60 libavcodec-extra aac-enc lame libmad0 flac twolame libaacs0 x265 sox libsox-fmt-mp3 libsox-fmt-ao 
-sudo apt install --install-recommends -y celluloid soundconverter yt-dlp 
+sudo apt install --install-recommends -y soundconverter yt-dlp 
 
-
-# NoMachine RDP
-# sometimes you need to update the download link and file name
-wget https://download.nomachine.com/download/9.0/Linux/nomachine_9.0.188_11_amd64.deb
-sudo apt install /home/lxadmin/nomachine_9.0.188_11_amd64.deb
 
 
 # Install makemkv (allow dvd and blueray copy)
@@ -124,9 +118,10 @@ sudo systemctl enable libvirtd
 
 # Some needed programs via flatpak
 flatpak install -y flathub com.github.tchx84.Flatseal
-flatpak install -y flathub com.vivaldi.Vivaldi
+flatpak install -y flathub com.nomachine.nxplayer
+flatpak install -y flathub org.mozilla.firefox
 flatpak install -y flathub org.strawberrymusicplayer.strawberry
-flatpak install -y flathub com.warlordsoftwares.formatlab
+flatpak install -y flathub info.smplayer.SMPlayer
 flatpak install -y flathub fr.handbrake.ghb
 flatpak install -y org.freedesktop.Platform.ffmpeg-full 
 
